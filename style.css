@@ -1,0 +1,373 @@
+/* Bootstrab Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  }
+  /*
+  2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+    font-family: verdana;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+  5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+  6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+  7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+  8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+:root{
+  /* Primary */
+
+  /* Text */
+  /* (sub-heading at the top of the app UI) */
+  --Pal-Violet: hsl(276, 100%, 81%);
+  /* (chat on the left) */
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Moderate-Violet-bg: hsla(276, 55%, 52%, .1);
+  /* (chat on the right) */
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  /* (placeholder text) */
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  /* (main heading) */
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /* (paragraph) */
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  
+  /* Gradients */
+  
+  /* These two colors are the vibrant backgound colors you see throughout the design and are applied as a linear gradient: */
+  
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  
+  /* Secondary */
+  
+  --White: hsl(0, 0%, 100%);
+  /* (app background) */
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  /* (submit button background) */
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Dark-Desaturated-Violet-footer: hsl(271, 36%, 8%);
+  /* (radio button outline) */
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+  .attribution { 
+    font-size: 16px; 
+    text-align: center;
+    padding: 24px;
+    background: var(--Very-Dark-Desaturated-Violet-footer);
+    color: var(--Light-Grayish-Violet);
+   }
+  .attribution a { 
+    color: hsl(228, 45%, 44%);
+   }
+p{
+  font-size: 16px;
+}
+.main{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.bg{
+  position: absolute;
+  width: 35%;
+  height: 90%;
+  background: #000;
+  top: 0;
+  left: -150px;
+  border-radius: 0 0 500px 500px;
+  background: linear-gradient(45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+.phone{
+  width: 360px;
+  min-height: 555px;
+  border-radius: 40px;
+  background: var(--White);
+  padding: 14px;
+  /* border: 1px solid black; */
+  box-shadow: 5px 5px 10px 0 hsl(271, 93%, 12%);
+  box-shadow: 5px 5px 10px 0 hsl(270, 20%, 96%);
+  box-shadow: 5px 5px 10px 0 hsla(0, 0%, 0%, 0.2);
+  z-index: 100;
+  margin: 40px 0;
+}
+.phone-inner{
+  /* border: 1px solid black; */
+  background: var(--Light-Grayish-Violet);
+  border-radius: 28px;
+  height: 100%;
+}
+.phone-header{
+  background: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  border-radius: 28px 28px 12px 12px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 40px 18px 18px 18px;
+  position: relative;
+  gap: 12px;
+  margin: 0 0 12px 0;
+}
+.phone-header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 30px;
+  background: var(--White);
+  z-index: 1000;
+  border-radius: 0 0 24px 24px;
+}
+.avatar{
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--White);
+}
+.sub-header{
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 700;
+}
+.label{
+  font-size: 12px;
+  color: var(--Pal-Violet);
+}
+.dot{
+  width: 4px;
+  height: 4px;
+  background: var(--White);
+  border-radius: 50%;
+  position: relative;
+  margin-left: auto;
+}
+.dot::before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--White);
+  border-radius: 50%;
+  top: 6px;
+}
+.dot::after{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--White);
+  border-radius: 50%; 
+  top: -6px;
+}
+.arrow{
+  position: relative;
+  margin-right: 10px;
+}
+.arrow::before{
+  content: '';
+  position: absolute;
+  top: -9px;
+  rotate: 25deg;
+  width: 3px;
+  height: 10px;
+  background: var(--White);
+  border-radius: 5px;
+}
+.arrow::after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  rotate: -25deg;
+  width: 3px;
+  height: 10px;
+  background: var(--White);
+  border-radius: 5px;
+}
+.chat{
+  font-size: 12px;
+  line-height: 13px;
+  width: 60%;
+  padding: 8px 12px;
+  margin: 8px;
+  font-weight: 500;
+}
+.chat.left{
+  border-radius: 14px;
+  color: var(--Moderate-Violet);
+  background: var(--Moderate-Violet-bg);
+}
+.chat.right{
+  border-radius: 14px 14px 4px 14px;
+  color: var(--Desaturated-Dark-Violet);
+  background: var(--White);
+  margin-left: auto;
+}
+.can{
+  width: 40%;
+}
+.chat-image-cont{
+  display: flex;
+  width: max-content;
+  margin: 8px;
+  margin-left: auto;
+  margin-top: 18px;
+}
+.chat-image{
+  width: 50px;
+  border-radius: 14px;
+  margin-left: 8px;
+}
+.radio-cont{
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  width: 70%;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 14px 14px 14px 4px;
+}
+.text{
+  width: 30%;
+  margin-left: 10vw;
+}
+.radio-btn{
+  margin-right: 12px;
+  position: relative;
+
+}
+.radio-btn::before{
+  content:'';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--Light-Magenta);
+  border-radius: 50%;
+  border: 2px solid var(--Very-Light-Magenta);
+}
+.time{
+  font-size: 12px;
+  color: var(--White);
+  margin-right: 40px;
+}
+.price{
+  color: var(--White);
+  font-weight: 700;
+  margin-left: auto;
+}
+.header{
+  color: var(--Very-Dark-Desaturated-Violet);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.form-cont{
+  width: 100%;
+}
+.form{
+  position: relative;
+  width: 100%;
+}
+.input{
+  width: 308px;
+  margin: 12px;
+  padding: 12px;
+  outline-color: transparent;
+  border: none;
+  border-radius: 24px;
+}
+.input::placeholder{
+  color: var(--Grayish-Blue);
+}
+.btn{
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: var(--Very-Dark-Desaturated-Violet);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: none;
+  outline-color: transparent;
+}
+.btn i{
+  color: var(--White);
+}
+.phar{
+  color: var(--Dark-Grayish-Violet);
+  font-size: 16px;
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (width < 1200px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width < 992px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width < 768px) {
+  .main{
+    flex-direction: column;
+  }
+  .bg{
+    width: 140%;
+    left: -95%;
+    height: 50%;
+  }
+  .phone{
+    width: 85%;
+    max-width: 360px;
+  }
+  .text{
+    z-index: 100;
+    width: 100%;
+    padding: 40px;
+    margin: 0;
+    text-align: center;
+  }
+  .time{
+    margin-right: 24px;
+  }
+  .input{
+    width: 266.75px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width < 576px) {}
